@@ -1,4 +1,7 @@
-# stepik-autotest-python
-Here i learn how to automate using Python
+# Hi all, welcome to my repository stepik-autotest-python
+======================================================================================
+## Here i learn how to automate using Python
+-----------------------------------------------------------------------------------------
+### Links to cource
 
-Link to lesson 3.1 step 7 https://stepik.org/lesson/187065/step/7?unit=161976
+If you want to learn more about course use following link, please: https://stepik.org/course/575/syllabus
