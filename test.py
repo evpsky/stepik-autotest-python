@@ -1,35 +1,31 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
-import math
 
+'''def test_input_text(expected_result, actual_result):
+    # ваша реализация, напишите assert и сообщение об ошибке
+    assert expected_result == actual_result, \
+        f"expected {expected_result}, got {actual_result}"
 
-def calc(x):
-    return math.log(abs(12 * math.sin(x)))
+# Разница между подходами IN and FIND
+s = 'My Name is Julia'
 
+if 'Name' in s:
+    print('Substring found')
 
+index = s.find('Name')
+if index != -1:
+    print(f'Substring found at index {index}')
+
+# Проверка текста в строке url
+link = "http://suninjuly.github.io/huge_form.html"
 browser = webdriver.Chrome()
+browser.get(link)
+assert "telenor" in browser.current_url,\
+    f"Wrolng link {link}"# сообщение об ошибке
 
-browser.get("http://suninjuly.github.io/explicit_wait2.html")
+full_string = str(input())
+substring = str(input())'''
 
-# говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
-text = WebDriverWait(browser, 12).until(
-        EC.text_to_be_present_in_element((By.ID, "price"), "$100")
-    )
-
-button = browser.find_element_by_id("book")
-button.click()
-
-value_count = browser.find_element_by_id("input_value").text
-print(value_count)
-count = int(value_count)
-print(count)
-number = calc(count)
-print(number)
-number_str = str(number)
-# find text field and send the calculated value
-name = browser.find_element_by_name("text")
-name.send_keys(number_str)
-button_submit = browser.find_element_by_id("solve")
-button_submit.click()
+def test_substring(full_string, substring):
+    # ваша реализация, напишите assert и сообщение об ошибке
+    assert substring in full_string,\
+        f"expected '{substring}' to be substring of '{full_string}'"
