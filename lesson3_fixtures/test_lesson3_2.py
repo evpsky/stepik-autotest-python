@@ -6,7 +6,7 @@ class TestAbs(unittest.TestCase):
     def test_site(self):
         link = "http://suninjuly.github.io/registration1.html"
         browser = webdriver.Chrome()
-        browser.get(link)
+        browser.get(link)pytest test_abs.py
 
         # Ваш код, который заполняет обязательные поля
         input1 = browser.find_element_by_css_selector(".first_block .form-control.first")
